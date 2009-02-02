@@ -13,6 +13,7 @@ Group:		Development/Python
 Url:		http://mathema.tician.de/software/pytools
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
+BuildRequires:	python-setuptools >= 0.6c8
 %py_requires -d
 
 %description
