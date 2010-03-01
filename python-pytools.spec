@@ -1,6 +1,6 @@
 %define module	pytools
 %define name	python-%{module}
-%define version 9
+%define version 10
 %define release %mkrel 1
 
 Summary:	A collection of tools for Python
@@ -24,17 +24,14 @@ those. If you're curious nonetheless, here's what's on offer:
 
 * A ton of small tool functions such as len_iterable, argmin, tuple
   generation, permutation generation, ASCII table pretty printing,
-  Michele Simionato's decorator module, GvR's mokeypatch_xxx() hack,
-  the elusive flatten, and much more.
+  GvR's mokeypatch_xxx() hack, the elusive flatten, and much more.
+* Michele Simionato's decorator module.
 * A time-series logging module, pytools.log.
 * Batch job submission, pytools.batchjob.
 * A lexer, pytools.lex.
 
 %prep
 %setup -q -n %{module}-%{version}
-
-%build
-%__python setup.py build
 
 %install
 %__rm -rf %{buildroot}
