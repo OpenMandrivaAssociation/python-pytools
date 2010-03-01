@@ -8,6 +8,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
+Patch0:		no-distribute.patch
 License:	MIT
 Group:		Development/Python
 Url:		http://mathema.tician.de/software/pytools
@@ -32,6 +33,7 @@ those. If you're curious nonetheless, here's what's on offer:
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p0
 
 %install
 %__rm -rf %{buildroot}
