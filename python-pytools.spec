@@ -1,6 +1,6 @@
 %define module	pytools
 %define name	python-%{module}
-%define version 10
+%define version 11
 %define release %mkrel 1
 
 Summary:	A collection of tools for Python
@@ -37,7 +37,7 @@ those. If you're curious nonetheless, here's what's on offer:
 
 %install
 %__rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot} --record=FILE_LIST
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
 
 %clean
 %__rm -rf %{buildroot}
