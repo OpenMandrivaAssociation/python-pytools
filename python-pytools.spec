@@ -1,7 +1,7 @@
 %define module	pytools
 %define name	python-%{module}
 %define version 11
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	A collection of tools for Python
 Name:		%{name}
