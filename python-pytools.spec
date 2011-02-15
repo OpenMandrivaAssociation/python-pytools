@@ -1,7 +1,7 @@
 %define module	pytools
 %define name	python-%{module}
-%define version 11
-%define release %mkrel 2
+%define version 2011.1
+%define release %mkrel 1
 
 Summary:	A collection of tools for Python
 Name:		%{name}
@@ -14,6 +14,7 @@ Group:		Development/Python
 Url:		http://mathema.tician.de/software/pytools
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
+Requires:	python-decorator >= 3.2.0
 BuildRequires:	python-setuptools >= 0.6c8
 %py_requires -d
 
