@@ -4,14 +4,14 @@ Summary:	A collection of tools for Python
 Name:		python-%{module}
 Version:	2013.5.1
 Release:	1
-Source0:	http://pypi.python.org/packages/source/p/pytools/pytools-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://mathema.tician.de/software/pytools
+Source0:	http://pypi.python.org/packages/source/p/pytools/pytools-%{version}.tar.gz
 BuildArch:	noarch
-Requires:	python-decorator >= 3.2.0
 BuildRequires:	python-setuptools >= 0.6c8
 BuildRequires:	python-devel
+Requires:	pkgconfig(python)
 
 %description
 Pytools is a big bag of things that are "missing" from the Python
@@ -28,7 +28,7 @@ those. If you're curious nonetheless, here's what's on offer:
 * A lexer, pytools.lex.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -qn %{module}-%{version}
 
 %install
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
