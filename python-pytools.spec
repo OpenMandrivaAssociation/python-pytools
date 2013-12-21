@@ -2,8 +2,8 @@
 
 Summary:	A collection of tools for Python
 Name:		python-%{module}
-Version:	2013.5.3
-Release:	5
+Version:	2013.5.7
+Release:	1
 License:	MIT
 Group:		Development/Python
 Url:		http://mathema.tician.de/software/pytools
@@ -36,5 +36,6 @@ sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
 %doc README
+
 
 
