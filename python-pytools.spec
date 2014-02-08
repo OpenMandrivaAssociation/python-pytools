@@ -3,7 +3,7 @@
 Summary:	A collection of tools for Python
 Name:		python-%{module}
 Version:	2011.5
-Release:	2
+Release:	3
 Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 Patch0:		no-distribute.patch
 License:	MIT
