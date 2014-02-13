@@ -12,7 +12,7 @@ Url:		http://mathema.tician.de/software/pytools
 BuildArch:	noarch
 Requires:	python-decorator >= 3.2.0
 BuildRequires:	python-setuptools >= 0.6c8
-%py_requires -d
+BuildRequires:  python-devel
 
 %description
 Pytools is a big bag of things that are "missing" from the Python
