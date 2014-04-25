@@ -1,8 +1,9 @@
 %define module	pytools
 
 Summary:	A collection of tools for Python
+
 Name:		python-%{module}
-Version:	2013.5.7
+Version:	2014.1.2
 Release:	1
 License:	MIT
 Group:		Development/Python
@@ -36,6 +37,7 @@ sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
 %doc README
+
 
 
 
