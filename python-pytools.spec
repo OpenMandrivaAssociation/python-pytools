@@ -4,7 +4,7 @@ Summary:	A collection of tools for Python
 
 Name:		python-%{module}
 Version:	2014.3.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Python
 Url:		http://mathema.tician.de/software/pytools
