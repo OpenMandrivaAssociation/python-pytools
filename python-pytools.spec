@@ -3,8 +3,8 @@
 Summary:	A collection of tools for Python
 
 Name:		python-%{module}
-Version:	2014.3.1
-Release:	2
+Version:	2014.3.5
+Release:	1
 License:	MIT
 Group:		Development/Python
 Url:		http://mathema.tician.de/software/pytools
@@ -32,7 +32,7 @@ those. If you're curious nonetheless, here's what's on offer:
 %setup -qn %{module}-%{version}
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot} --record=FILE_LIST
 sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
