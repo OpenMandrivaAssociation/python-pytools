@@ -4,5 +4,6 @@ removed_sources:
   pytools-2013.5.3.tar.gz: e591ad0b86aa867831e67a8c986568141b93b033
   pytools-2013.5.7.tar.gz: 975e376907474c3ec95fcc9272a2970106dc75af
   pytools-2014.1.2.tar.gz: e35b2d4cf04bfde9985c587f4c21d17f7d9b5bb2
-sources:
   pytools-2014.3.1.tar.gz: 9bca8e617cc4162bc1f697e065a3ad91efe1052f
+sources:
+  pytools-2015.1.6.tar.gz: 6b4baecf6053259fb1bb58f591fbc2daa6eff0a5
