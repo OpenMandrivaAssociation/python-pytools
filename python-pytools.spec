@@ -11,6 +11,11 @@ License:	MIT
 Group:		Development/Python
 Url:		http://pypi.python.org/pypi/%{module}
 BuildArch:      noarch
+BuildRequires:	python-setuptools
+BuildRequires:	python2-setuptools
+BuildRequires:	python-six
+BuildRequires:	python2-six
+BuildRequires:	pkgconfig(python2)
 
 
 %description
@@ -32,9 +37,6 @@ those. If you're curious nonetheless, here's what's on offer:
 Summary:	A collection of tools for Python 3
 Group:		Development/Python
 BuildArch:	noarch
-BuildRequires:	python2dist(setuptools)
-BuildRequires:	pkgconfig(python2)
-BuildRequires:	python2dist(six)
 Obsoletes:      python-pytools < 2018.5.2
 Provides:       python-pytools = %{version}-%{release}
 #(eatdirt) packages needed this should be updated and fixed (TODO)
