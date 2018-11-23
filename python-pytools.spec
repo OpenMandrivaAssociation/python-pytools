@@ -1,18 +1,17 @@
 %define module	pytools
 
-Summary:	A collection of tools for Python
+%define debug_package          %{nil}
 
+Summary:	A collection of tools for Python
 Name:		python-%{module}
-Version:	2015.1.6
-Release:	2
+Version:	2018.5.2
+Release:	%mkrel 5
+Source0:	https://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
-Url:		http://mathema.tician.de/software/pytools
-Source0:	http://pypi.python.org/packages/source/p/pytools/pytools-%{version}.tar.gz
-BuildArch:	noarch
-BuildRequires:	python-setuptools >= 0.6c8
-BuildRequires:	python-devel
-Requires:	pkgconfig(python)
+Url:		http://pypi.python.org/pypi/%{module}
+BuildArch:      noarch
+
 
 %description
 Pytools is a big bag of things that are "missing" from the Python
@@ -28,12 +27,56 @@ those. If you're curious nonetheless, here's what's on offer:
 * Batch job submission, pytools.batchjob.
 * A lexer, pytools.lex.
 
+
+%package -n python2-%{module} 
+Summary:	A collection of tools for Python 3
+Group:		Development/Python
+BuildArch:	noarch
+BuildRequires:	python2dist(setuptools)
+BuildRequires:	pkgconfig(python2)
+BuildRequires:	python2dist(six)
+Obsoletes:      python-pytools < 2018.5.2
+Provides:       python-pytools = %{version}-%{release}
+#(eatdirt) packages needed this should be updated and fixed (TODO)
+Obsoletes:      python-tools < 2018.5.2
+Provides:       python-tools = %{version}-%{release}
+
+
+%description -n python2-%{module} 
+Pytools is a big bag of things that are "missing" from the Python
+standard library. This is mainly a dependency of my other software
+packages, and is probably of little interest to you unless you use
+those. If you're curious nonetheless, here's what's on offer:
+
+* A ton of small tool functions such as len_iterable, argmin, tuple
+  generation, permutation generation, ASCII table pretty printing,
+  GvR's mokeypatch_xxx() hack, the elusive flatten, and much more.
+* Michele Simionato's decorator module.
+* A time-series logging module, pytools.log.
+* Batch job submission, pytools.batchjob.
+* A lexer, pytools.lex.
+
 %prep
-%setup -qn %{module}-%{version}
+%setup -q -n %{module}-%{version}
+cp -a . %{py3dir}
+
+%build
+%py2_build
+pushd %{py3dir}
+%py3_build
+popd
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
-sed -i 's/.*egg-info$//' FILE_LIST
+%py2_install
+pushd %{py3dir}
+%py3_install
+popd
 
-%files -f FILE_LIST
-%doc README
+%files -n python-%{module} 
+%doc README.rst PKG-INFO LICENSE
+%{python3_sitelib}/*
+
+%files -n python2-%{module}
+%doc README.rst PKG-INFO LICENSE
+%{python2_sitelib}/*
+
