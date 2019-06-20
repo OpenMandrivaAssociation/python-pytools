@@ -4,7 +4,7 @@
 
 Summary:	A collection of tools for Python
 Name:		python-%{module}
-Version:	2018.5.2
+Version:	2019.1.1
 Release:	%mkrel 5
 Source0:	https://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 License:	MIT
