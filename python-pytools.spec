@@ -5,7 +5,7 @@
 Summary:	A collection of tools for Python
 Name:		python-%{module}
 Version:	2019.1.1
-Release:	%mkrel 5
+Release:	6
 Source0:	https://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
