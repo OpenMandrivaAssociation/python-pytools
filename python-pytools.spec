@@ -4,9 +4,9 @@
 
 Summary:	A collection of tools for Python
 Name:		python-%{module}
-Version:	2019.1.1
-Release:	6
-Source0:	https://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
+Version:	2020.1
+Release:	1
+Source0:	https://files.pythonhosted.org/packages/66/c7/88a4f8b6f0f78d0115ec3320861a0cc1f6daa3b67e97c3c2842c33f9c089/pytools-2020.1.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://pypi.python.org/pypi/%{module}
