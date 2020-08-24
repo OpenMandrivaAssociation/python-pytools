@@ -4,9 +4,9 @@
 
 Summary:	A collection of tools for Python
 Name:		python-%{module}
-Version:	2020.3.1
+Version:	2020.4
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/6c/78/54e6146f65b8c6779634d28f46cad0ad6effe5f3d7614fe9892abd8e0d3c/pytools-2020.3.1.tar.gz
+Source0:	https://files.pythonhosted.org/packages/73/d5/989a1d2bba90f5c085e4929a4b703bbd8cc6b4a4218f1671fadab2abe966/pytools-2020.4.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://pypi.python.org/pypi/%{module}
