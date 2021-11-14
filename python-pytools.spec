@@ -4,9 +4,9 @@
 
 Summary:	A collection of tools for Python
 Name:		python-%{module}
-Version:	2021.1
+Version:	2021.2.9
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/46/8a/149fa553998155f0a90d92cdbbc60f6c998cc9ad5fe0441b2b82628d001a/pytools-2021.1.tar.gz
+Source0:	https://files.pythonhosted.org/packages/46/4b/d0f2b0076f73fc792810cb217a19e24b09a417f261fdb12112859a551076/pytools-2021.2.9.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://pypi.python.org/pypi/%{module}
