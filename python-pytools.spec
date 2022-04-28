@@ -5,7 +5,7 @@
 Summary:	A collection of tools for Python
 Name:		python-%{module}
 Version:	2022.1
-Release:	1
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/5b/0b/260d69e3e7c16af4af91198c5279004c9e8786ff33fae3760f3f4fc697b4/pytools-2022.1.tar.gz
 License:	MIT
 Group:		Development/Python
