@@ -9,7 +9,7 @@ Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pytools/pytools-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
-Url:		http://pypi.python.org/pypi/%{module}
+Url:		https://pypi.python.org/pypi/%{module}
 BuildArch:      noarch
 BuildRequires:	python-setuptools
 BuildRequires:	python-six
