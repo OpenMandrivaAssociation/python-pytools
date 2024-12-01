@@ -11,9 +11,9 @@ License:	MIT
 Group:		Development/Python
 Url:		https://pypi.python.org/pypi/%{module}
 BuildArch:      noarch
-BuildRequires:	python-setuptools
-BuildRequires:	python-six
-
+BuildSystem:	python
+BuildRequires:	python%{pyver}dist(six)
+BuildRequires:	python%{pyver}dist(hatchling)
 
 %description
 Pytools is a big bag of things that are "missing" from the Python
@@ -31,13 +31,7 @@ those. If you're curious nonetheless, here's what's on offer:
 
 
 %prep
-%setup -q -n %{module}-%{version}
-
-%build
-%py3_build
-
-%install
-%py3_install
+%autosetup -p1 -n %{module}-%{version}
 
 %files -n python-%{module} 
 %doc README.rst PKG-INFO LICENSE
