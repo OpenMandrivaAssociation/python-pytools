@@ -4,8 +4,8 @@
 
 Summary:	A collection of tools for Python
 Name:		python-%{module}
-Version:	2025.1.5
-Release:	2
+Version:	2025.2.5
+Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pytools/pytools-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
