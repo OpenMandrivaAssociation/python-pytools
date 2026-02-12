@@ -1,19 +1,20 @@
-%define module	pytools
+%define debug_package %{nil}
+%define module pytools
 
-%define debug_package          %{nil}
-
+Name:		python-pytools
 Summary:	A collection of tools for Python
-Name:		python-%{module}
 Version:	2025.2.5
-Release:	2
-Source0:	https://files.pythonhosted.org/packages/source/p/pytools/pytools-%{version}.tar.gz
+Release:	3
 License:	MIT
 Group:		Development/Python
-Url:		https://pypi.python.org/pypi/%{module}
-BuildArch:      noarch
+URL:		https://pypi.python.org/pypi/pytools
+Source0:	https://files.pythonhosted.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 BuildSystem:	python
+BuildArch:  noarch
 BuildRequires:	python%{pyver}dist(six)
 BuildRequires:	python%{pyver}dist(hatchling)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Pytools is a big bag of things that are "missing" from the Python
@@ -29,10 +30,8 @@ those. If you're curious nonetheless, here's what's on offer:
 * Batch job submission, pytools.batchjob.
 * A lexer, pytools.lex.
 
-
-%prep
-%autosetup -p1 -n %{module}-%{version}
-
-%files -n python-%{module} 
-%doc README.rst PKG-INFO LICENSE
-%{python3_sitelib}/*
+%files
+%doc README.rst
+%license LICENSE
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
