@@ -1,14 +1,14 @@
-%define debug_package %{nil}
 %define module pytools
 
 Name:		python-pytools
 Summary:	A collection of tools for Python
-Version:	2025.2.5
-Release:	3
+Version:	2026.1
+Release:	1
 License:	MIT
 Group:		Development/Python
 URL:		https://pypi.python.org/pypi/pytools
-Source0:	https://files.pythonhosted.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
 BuildSystem:	python
 BuildArch:  noarch
 BuildRequires:	python%{pyver}dist(six)
