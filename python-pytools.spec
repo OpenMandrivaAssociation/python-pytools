@@ -2,16 +2,15 @@
 
 Name:		python-pytools
 Summary:	A collection of tools for Python
-Version:	2026.1
+Version:	2026.1.1
 Release:	1
 License:	MIT
 Group:		Development/Python
-URL:		https://pypi.python.org/pypi/pytools
-Source0:	https://files.pythonhosted.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+URL:		https://documen.tician.de/pytools
+Source0:	https://github.com/inducer/pytools/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildSystem:	python
 BuildArch:  noarch
-BuildRequires:	python%{pyver}dist(six)
 BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(wheel)
@@ -32,6 +31,5 @@ those. If you're curious nonetheless, here's what's on offer:
 
 %files
 %doc README.rst
-%license LICENSE
 %{python_sitelib}/%{module}
 %{python_sitelib}/%{module}-%{version}.dist-info
